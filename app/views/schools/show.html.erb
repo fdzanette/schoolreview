@@ -16,9 +16,14 @@
       <%end%>
     </div>
   </div>
+  <hr>
   <div class="row">
     <div class="col-xs-12">
-      <div class="map">
+      <div class="map-wrap">
+        <h4> Localização: </h4>
+          <div id="map" style="width: 100%; height: 400px;"
+          data-markers="<%= @markers.to_json %>">
+          </div>
       </div>
     </div>
   </div>

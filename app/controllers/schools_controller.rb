@@ -9,6 +9,12 @@ class SchoolsController < ApplicationController
     @school = School.find(params[:id])
     @review = Review.new
     @reviews = @school.reviews
+    @markers =
+      {
+        lat: @school.latitude,
+        lng: @school.longitude#,
+        # infoWindow: { content: render_to_string(partial: "/flats/map_box", locals: { flat: flat }) }
+      }
   end
 
   def new
@@ -29,7 +35,7 @@ class SchoolsController < ApplicationController
   end
 
   def destroy
-
+    @school.destroy
   end
 
   private
