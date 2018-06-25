@@ -1,7 +1,7 @@
 <div class="container">
   <div class="col-xs-12">
 
-    <h2 class="text-center"> Escolas mais bem avaliadas </h2>
+    <h2 class="text-center"> Escolas cadastradas </h2>
     <% @school.each do |school|%>
       <ul>
         <li> <%= link_to school.name, school_path(school) %> </li>
