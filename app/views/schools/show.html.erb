@@ -1,13 +1,14 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
-      <h4> Escola <%= @school.name%> (<% empty = 5 - @reviews.average(:rating).to_i %>
+      <h4> Escola <%= @school.name%> </h4>
+       <p> (<% empty = 5 - @reviews.average(:rating).to_i %>
                   <% @reviews.average(:rating).to_i.times do %>
                     <i class="fas fa-star"></i>
                   <% end %>
                   <% empty.times do %>
                     <i class="far fa-star"></i>
-                  <% end %>) </h4>
+                  <% end %>) </p>
       <h4> Endereço: <%= @school.address %></h4>
       <p> <%= link_to "Comentar", new_school_review_path(@school) %></p>
     </div>
@@ -22,7 +23,6 @@
       <%end%>
     </div>
   </div>
-  <hr>
   <div class="row">
     <div class="col-xs-12">
       <div class="map-wrap">
