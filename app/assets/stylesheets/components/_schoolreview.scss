@@ -49,3 +49,20 @@
 .message-body p {
   margin: 6px 0;
 }
+
+.aval-row {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 15px;
+  margin-left: 10px;
+}
+
+.aval-row a {
+  color: gray;
+  font-weight: bold;
+}
+
+.aval-row a:hover {
+  text-decoration: none;
+  color: blue;
+}

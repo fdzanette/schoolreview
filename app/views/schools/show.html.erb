@@ -2,20 +2,22 @@
   <div class="row">
     <div class="col-xs-12">
       <h4> Escola <%= @school.name%> </h4>
-       <p> (<% empty = 5 - @reviews.average(:rating).to_i %>
+       <p> <% empty = 5 - @reviews.average(:rating).to_i %>
                   <% @reviews.average(:rating).to_i.times do %>
                     <i class="fas fa-star"></i>
                   <% end %>
                   <% empty.times do %>
                     <i class="far fa-star"></i>
-                  <% end %>) </p>
-      <h4> Endereço: <%= @school.address %></h4>
-      <p> <%= link_to "Comentar", new_school_review_path(@school) %></p>
+                  <% end %> (<%= @school.reviews.count %> Avaliações) </p>
+      <h5> Endereço: <%= @school.address %></h5>
     </div>
   </div>
   <div class="row">
     <div class="col-xs-12">
-      <h4>Veja o que foi dito sobre a escola</h4>
+      <div class="aval-row">
+        <div> <h5>Avaliações </h5> </div>
+        <div> <h5> <%= link_to "Deixe a sua avaliação", new_school_review_path(@school) %></h5> </div>
+      </div>
         <% @reviews.each do |review| %>
           <% user = review.user_id%>
             <div class="message">
