@@ -31,7 +31,8 @@
 
             <div role="tabpanel" class="tab-pane active" id="rev">
               <% @reviews.each do |review| %>
-                <% user = review.user_id%>
+                <% if @school.reviews.count != 0 %>
+                  <% user = review.user_id%>
                   <div class="message">
                     <div class="message-name">
                     <h3><%= User.find(user).email %></h3>
@@ -42,13 +43,24 @@
                       <p><%= review.rating %></p>
                     </div>
                   </div>
+                <%end%>
               <%end%>
             </div>
 
         <div role="tabpanel" class="tab-pane" id="photos">
             <% @reviews.each do |review| %>
-              <% if @school.photos.count != 0 %>
-
+              <% if @school.photos.count == 0 %>
+                <% user = review.user_id%>
+                <div class="message">
+                    <div class="message-name">
+                    <h3><%= User.find(user).email %></h3>
+                    <p><%= review.created_at %></p>
+                    </div>
+                    <div class="message-body">
+                      <p><strong><%= review.content %></strong></p>
+                      <p><%= review.rating %></p>
+                    </div>
+                  </div>
               <%end%>
             <%end%>
         </div>
