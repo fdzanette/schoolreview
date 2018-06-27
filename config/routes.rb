@@ -3,9 +3,9 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   resources :schools, only: [:index, :show]
-
   resources :schools do
     resources :reviews, only: [:index, :new, :create, :destroy ]
+    resources :photos, only: [:new]
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

@@ -22,22 +22,38 @@
   <div class="row">
     <div class="col-xs-12">
       <div class="aval-row">
-        <div> <h5>Avaliações </h5> </div>
+        <ul class="nav nav-tabs" role="tablist">
+          <li role="presentation" class="active"><a href="#rev" aria-controls="rev" role="tab" data-toggle="tab"><p>Avaliações</p></a></li>
+          <li role="presentation"><a href="#photos" aria-controls="photos" role="tab" data-toggle="tab"> <p>Fotos</p></a></li>
+        </ul>
         <div> <h5> <%= link_to "Deixe a sua avaliação", new_school_review_path(@school), class: "btn btn-primary" %></h5> </div>
       </div>
-        <% @reviews.each do |review| %>
-          <% user = review.user_id%>
-            <div class="message">
-              <div class="message-name">
-              <h3><%= User.find(user).email %></h3>
-              <p><%= review.created_at %></p>
-              </div>
-              <div class="message-body">
-                <p><strong><%= review.content %></strong></p>
-                <p><%= review.rating %></p>
-              </div>
+
+            <div role="tabpanel" class="tab-pane active" id="rev">
+              <% @reviews.each do |review| %>
+                <% user = review.user_id%>
+                  <div class="message">
+                    <div class="message-name">
+                    <h3><%= User.find(user).email %></h3>
+                    <p><%= review.created_at %></p>
+                    </div>
+                    <div class="message-body">
+                      <p><strong><%= review.content %></strong></p>
+                      <p><%= review.rating %></p>
+                    </div>
+                  </div>
+              <%end%>
             </div>
-        <%end%>
+
+        <div role="tabpanel" class="tab-pane" id="photos">
+            <% @reviews.each do |review| %>
+              <% if @school.photos.count != 0 %>
+
+              <%end%>
+            <%end%>
+        </div>
+
+
     </div>
   </div>
   <div class="row">

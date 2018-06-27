@@ -64,3 +64,17 @@
 .aval-row a:hover {
   text-decoration: none;
 }
+
+.nav {
+  text-align: center;
+}
+
+.nav li a {
+  color: black !important;
+}
+
+.nav-tabs li a:hover{
+  background-color: white !important;
+  color: black !important;
+  border: none !important;
+}
