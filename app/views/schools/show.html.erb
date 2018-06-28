@@ -24,7 +24,7 @@
       <div class="aval-row">
         <ul class="nav nav-tabs" role="tablist">
           <li role="presentation" class="active"><a href="#rev" aria-controls="rev" role="tab" data-toggle="tab"><p>Avaliações</p></a></li>
-          <li role="presentation"><a href="#photos" aria-controls="photos" role="tab" data-toggle="tab"> <p>Fotos</p></a></li>
+          <li role="presentation"><a href="#photos" aria-controls="photos" role="tab" data-toggle="tab"> <p><%= link_to "Fotos", school_reviews_path(@school) %></p></a></li>
         </ul>
         <div> <h5> <%= link_to "Deixe a sua avaliação", new_school_review_path(@school), class: "btn btn-primary" %></h5> </div>
       </div>
@@ -42,30 +42,18 @@
                       <p><strong><%= review.content %></strong></p>
                       <p><%= review.rating %></p>
                     </div>
+                    <div class="rev-photo">
+                    <% if @mounted_as == :photo %>
+                      <%= cl_image_tag review.photo, height: 80, width: 80, crop: :fill %>
+                    <% else %>
+                      <%= image_tag "Sem-imagem.jpg", height: 80, width: 80, crop: :fill %>
+                    <%end%>
+                    <%raise%>
+                    </div>
                   </div>
                 <%end%>
               <%end%>
             </div>
-
-        <div role="tabpanel" class="tab-pane" id="photos">
-            <% @reviews.each do |review| %>
-              <% if @school.photos.count == 0 %>
-                <% user = review.user_id%>
-                <div class="message">
-                    <div class="message-name">
-                    <h3><%= User.find(user).email %></h3>
-                    <p><%= review.created_at %></p>
-                    </div>
-                    <div class="message-body">
-                      <p><strong><%= review.content %></strong></p>
-                      <p><%= review.rating %></p>
-                    </div>
-                  </div>
-              <%end%>
-            <%end%>
-        </div>
-
-
     </div>
   </div>
   <div class="row">

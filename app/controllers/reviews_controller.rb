@@ -1,8 +1,8 @@
 class ReviewsController < ApplicationController
-  before_action :set_school, only: [:new, :create]
+  before_action :set_school, only: [:index, :new, :create, :display_pics]
 
   def index
-
+    @photos = @school.reviews
   end
 
   def new
@@ -21,19 +21,23 @@ class ReviewsController < ApplicationController
     end
   end
 
+  def display_pics
+    @photos = @school.reviews
+  end
+
   def destroy
 
   end
 
   private
 
-   def set_school
+  def set_school
     @school = School.find(params[:school_id])
   end
 
 
   def review_params
-    params.require(:review).permit(:content, :rating)
+    params.require(:review).permit(:content, :rating, :photo)
   end
 
 end

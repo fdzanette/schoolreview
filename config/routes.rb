@@ -4,8 +4,7 @@ Rails.application.routes.draw do
 
   resources :schools, only: [:index, :show]
   resources :schools do
-    resources :reviews, only: [:index, :new, :create, :destroy ]
-    resources :photos, only: [:new]
+    resources :reviews, only: [:index, :new, :create, :destroy, :display_pics]
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

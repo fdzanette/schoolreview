@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h3 class="text-center"> Fotos da escola <%= @school.name %> </h3>
+        <% @photos.each do |pic|%>
+          <div class="details">
+            <div class="nota"> <%= cl_image_tag pic.photo, height: 200, width: 300, crop: :fill %> </div>
+          </div>
+      <%end%>
+    </div>
+  </div>
+</div>
