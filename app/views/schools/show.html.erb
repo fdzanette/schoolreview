@@ -35,7 +35,7 @@
                   <% user = review.user_id%>
                   <div class="message">
                     <div class="message-name">
-                    <h3><%= User.find(user).email %></h3>
+                    <h3><%= User.find(user).name %></h3>
                     <p><%= review.created_at %></p>
                     </div>
                     <div class="message-body">
