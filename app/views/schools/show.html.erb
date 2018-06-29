@@ -31,7 +31,7 @@
 
             <div role="tabpanel" class="tab-pane active" id="rev">
               <% @reviews.each do |review| %>
-                <% if @school.reviews.count != 0 %>
+                <% if review.content.present? %>
                   <% user = review.user_id%>
                   <div class="message">
                     <div class="message-name">

@@ -1,4 +1,15 @@
 <div class="container">
-  <h4>Escreva algo sobre a escola <%= @school.name %></h4>
-  <p><%= render 'form' %></p>
+   <div class="row">
+    <div class="col-xs-12">
+      <div class="name-wrap">
+        <div class="name">
+          <h4>Avalie a escola <%= @school.name %>, ou poste uma foto! </h4>
+        </div>
+        <div class="link-voltar">
+          <%= link_to "Voltar", school_path(@school) %>
+        </div>
+      </div>
+    <p><%= render 'form' %></p>
+    </div>
+  </div>
 </div>

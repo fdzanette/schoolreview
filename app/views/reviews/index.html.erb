@@ -1,6 +1,9 @@
 <div class="container">
   <div class="photo-header">
-    <h4 class="text-center"> Fotos da escola <%= @school.name %> </h4>
+    <div class="photo-post">
+      <h4 class="text-center"> Fotos da escola <%= @school.name %> </h4>
+      <div> <%= link_to "Nova foto!", new_school_review_path(@school), class: "btn-postar btn btn-primary" %> </div>
+    </div>
     <div class="link-voltar"> <%= link_to "Voltar", school_path(@school) %> </div>
   </div>
   <div class="row">

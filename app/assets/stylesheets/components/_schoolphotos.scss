@@ -9,3 +9,14 @@
 
 .photorow {
 }
+
+.photo-post {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.btn-postar {
+  margin-left: 15px;
+  text-align: center;
+}
