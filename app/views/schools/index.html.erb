@@ -3,7 +3,7 @@
     <div class="col-xs-12 col-sm-offset-1 col-sm-10">
       <h3 class="text-center"> Escolas cadastradas </h3>
         <% @school.each do |school|%>
-          <div class="details">
+          <div class="details col-xs-12 col-md-offset-3 col-md-6">
             <div class="school-name"> <%= link_to school.name, school_path(school) %> </div>
             <div class="nota"> <%= school.reviews.count %> avaliações </div>
           </div>
