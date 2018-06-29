@@ -30,29 +30,40 @@
       </div>
 
             <div role="tabpanel" class="tab-pane active" id="rev">
+              <% count = 0 %>
               <% @reviews.each do |review| %>
                 <% if review.content.present? %>
-                  <% user = review.user_id%>
-                  <div class="message">
-                    <div class="message-name">
-                    <h3><%= User.find(user).name %></h3>
-                    <p><%= review.created_at.to_date %></p>
+                    <% user = review.user_id%>
+                    <div class="message">
+                      <div class="message-name">
+                      <h3><%= User.find(user).name %></h3>
+                      <p><%= review.created_at.to_date %></p>
+                      </div>
+                      <div class="message-body">
+                        <p><strong><%= review.content %></strong></p>
+                        <p><%= review.rating %></p>
+                      </div>
+                      <div class="rev-photo">
+                      <% if review.photo.present? %>
+                        <%= cl_image_tag review.photo, height: 80, width: 80, crop: :fill %>
+                      <% else %>
+                        <%= image_tag "Sem-imagem.jpg", height: 80, width: 80, crop: :fill %>
+                      <%end%>
+                      </div>
                     </div>
-                    <div class="message-body">
-                      <p><strong><%= review.content %></strong></p>
-                      <p><%= review.rating %></p>
-                    </div>
-                    <div class="rev-photo">
-                    <% if review.photo.present? %>
-                      <%= cl_image_tag review.photo, height: 80, width: 80, crop: :fill %>
-                    <% else %>
-                      <%= image_tag "Sem-imagem.jpg", height: 80, width: 80, crop: :fill %>
-                    <%end%>
-                    </div>
-                  </div>
+                    <% count += 1%>
+                    <% if count >= 5%>
+                      <% break %>
+                    <% end %>
                 <%end%>
               <%end%>
+            <% if count >= 5 %>
+                <div class="text-center">
+                <%= link_to "Ver todas", all_school_reviews_path(@school) %>
+                </div>
+            <% end %>
             </div>
+
     </div>
   </div>
   <div class="row">

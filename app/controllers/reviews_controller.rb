@@ -1,6 +1,10 @@
 class ReviewsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index]
-  before_action :set_school, only: [:index, :new, :create, :display_pics]
+  before_action :set_school, only: [:index, :new, :create, :all]
+
+  def all
+    @reviews = @school.reviews
+  end
 
   def index
     @photos = @school.reviews
@@ -20,10 +24,6 @@ class ReviewsController < ApplicationController
     else
       render :new
     end
-  end
-
-  def display_pics
-    @photos = @school.reviews
   end
 
   def destroy

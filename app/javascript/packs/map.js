@@ -6,5 +6,5 @@ if (mapElement) { // don't try to build a map if there's no div#map to inject in
   const markers = JSON.parse(mapElement.dataset.markers);
   map.addMarker(markers);
   map.setCenter(markers["lat"], markers["lng"]);
-  map.setZoom(16);
+  map.setZoom(15);
 }
