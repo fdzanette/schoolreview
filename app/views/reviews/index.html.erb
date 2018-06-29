@@ -1,12 +1,17 @@
 <div class="container">
+  <div class="photo-header">
+    <h4 class="text-center"> Fotos da escola <%= @school.name %> </h4>
+    <div class="link-voltar"> <%= link_to "Voltar", school_path(@school) %> </div>
+  </div>
   <div class="row">
-    <div class="col-xs-12">
-      <h3 class="text-center"> Fotos da escola <%= @school.name %> </h3>
-        <% @photos.each do |pic|%>
-          <div class="details">
-            <div class="nota"> <%= cl_image_tag pic.photo, height: 200, width: 300, crop: :fill %> </div>
+    <% @photos.each do |pic|%>
+      <% if pic.photo.present? %>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <div class="photorow">
+            <div class="photoajust"> <%= cl_image_tag pic.photo, height: 200, width: 260, crop: :fill %> </div>
           </div>
+        </div>
       <%end%>
-    </div>
+    <%end%>
   </div>
 </div>
