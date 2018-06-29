@@ -1,4 +1,5 @@
 class ReviewsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index]
   before_action :set_school, only: [:index, :new, :create, :display_pics]
 
   def index
