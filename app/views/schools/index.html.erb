@@ -1,13 +1,31 @@
 <div class="container">
   <div class="row">
-    <div class="col-xs-12 col-sm-offset-1 col-sm-10">
-      <h3 class="text-center"> Escolas cadastradas </h3>
+    <div class="col-xs-12 col-sm-offset-2 col-sm-8">
+        <div class="styletitle">
+          <h3 class="text-center"> Escolas cadastradas </h3>
+        </div>
         <% @school.each do |school|%>
-          <div class="details col-xs-12 col-md-offset-3 col-md-6">
-            <div class="school-name"> <%= link_to school.name, school_path(school) %> </div>
-            <div class="nota"> <%= school.reviews.count %> avaliações </div>
+            <div class="details col-xs-12 col-md-offset-2 col-sm-8">
+              <a href=<%= school_path(school) %>>
+              <div class="card-wrapper">
+                <div class="imgagewrap">
+                  <img class="schoolimage" src=<%= school.photo %>>
+                </div>
+                <div class="schoolinfo">
+                  <div class="school-name"> <%= link_to school.name, school_path(school) %> </div>
+                  <div class="stars"> <p> <% empty = 5 - school.reviews.average(:rating).to_i %>
+                    <% school.reviews.average(:rating).to_i.times do %>
+                      <i class="fas fa-star"></i>
+                    <% end %>
+                    <% empty.times do %>
+                      <i class="far fa-star"></i>
+                    <% end %> </p> </div>
+                  <div class="nota"> <%= school.reviews.count %> avaliações </div>
+                  <div class="nota"> Média: <%= school.reviews.average(:rating).to_f.round(1) %> </div>
+                </div>
+            </div>
           </div>
-      <%end%>
+        <%end%>
     </div>
   </div>
 </div>
