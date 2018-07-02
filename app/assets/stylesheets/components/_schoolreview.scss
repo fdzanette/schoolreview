@@ -1,3 +1,7 @@
+.nav .nav-tabs li {
+  font-size: 13px;
+}
+
 .message {
   display: flex;
   align-items: center;
@@ -15,10 +19,11 @@
   border-bottom: none;
 }
 .message-body {
-  margin-left: 15px;
   flex-grow: 1;
   font-size: 13px;
   color: rgba(0,0,0,0.7);
+  text-align: justify;
+  text-justify: auto;
 }
 .message-name {
   padding-left: 10px;

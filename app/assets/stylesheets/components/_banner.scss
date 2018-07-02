@@ -1,17 +1,22 @@
 .banner {
-  background-image: asset-url("sala.png");
+  background-image: asset-url("quadro.jpg");
   opacity: 0.9;
   text-align: center;
   height: 600px;
   /* if you have a 70px navbar => height: calc(100vh - 70px); */
   background-size: cover !important;
   display: flex;
-  align-items: center;
   justify-content: center;
 }
-.banner-content h2, h3 {
+
+.banner-content {
+  margin-top: 110px;
+}
+
+.banner h2, h3, h4 {
   color: green;
   font-weight: bold;
+  padding: 8px;
 }
 .banner p {
   font-size: 25px;
@@ -27,4 +32,10 @@
 
 .banner-content a:hover {
   text-decoration: none;
+}
+
+.back-img {
+  background-image: asset-url("quadro.jpg");
+  opacity: 0.8;
+  background-size: cover !important;
 }
