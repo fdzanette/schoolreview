@@ -1,13 +1,17 @@
 .photo-header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
+.photo-header h4 {
+  color: white;
+  font-size: 20px;
+  text-shadow: 5px 1px 6px black;
+}
 .photoajust {
   margin: 8px;
-}
-
-.photorow {
+  text-align: center;
 }
 
 .photo-post {
@@ -16,7 +20,17 @@
   align-items: center;
 }
 
+.photolinks {
+  text-align: right;
+}
+
+.photolinks .link-voltar {
+  margin-top: 2px;
+  margin-right: -2px;
+  margin-bottom: 8px;
+}
+
 .btn-postar {
-  margin-left: 15px;
   text-align: center;
+  font-size: 16px;
 }

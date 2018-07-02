@@ -1,32 +1,34 @@
-<div class="container">
-  <div class="name-wrap">
-    <div class="text-center">
-      <p> Todas as avaliações: <%= @school.name %></p>
+<div class="back-img">
+  <div class="container">
+    <div class="name-wrap">
+      <div>
+        <p> Todas as avaliações: <%= @school.name %></p>
+      </div>
+      <div class="link-voltar">
+        <%= link_to "Voltar", school_path(@school) %>
+      </div>
     </div>
-    <div class="link-voltar">
-      <%= link_to "Voltar", school_path(@school) %>
-    </div>
-  </div>
-    <% @reviews.each do |review| %>
-      <% if review.content.present? %>
-      <% user = review.user_id%>
-        <div class="message">
-          <div class="message-name">
-            <h3><%= User.find(user).name %></h3>
-            <p><%= review.created_at.to_date %></p>
+      <% @reviews.each do |review| %>
+        <% if review.content.present? %>
+        <% user = review.user_id%>
+          <div class="message">
+            <div class="message-name">
+              <h3><%= User.find(user).name %></h3>
+              <p><%= review.created_at.to_date %></p>
+            </div>
+            <div class="message-body">
+              <p><strong><%= review.content %></strong></p>
+              <p><%= review.rating %></p>
+            </div>
+            <div class="rev-photo">
+              <% if review.photo.present? %>
+              <%= cl_image_tag review.photo, height: 80, width: 80, crop: :fill %>
+              <% else %>
+              <%= image_tag "Sem-imagem.jpg", height: 80, width: 80, crop: :fill %>
+              <%end%>
+            </div>
           </div>
-          <div class="message-body">
-            <p><strong><%= review.content %></strong></p>
-            <p><%= review.rating %></p>
-          </div>
-          <div class="rev-photo">
-            <% if review.photo.present? %>
-            <%= cl_image_tag review.photo, height: 80, width: 80, crop: :fill %>
-            <% else %>
-            <%= image_tag "Sem-imagem.jpg", height: 80, width: 80, crop: :fill %>
-            <%end%>
-          </div>
-        </div>
+        <%end%>
       <%end%>
-    <%end%>
+  </div>
 </div>
