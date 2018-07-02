@@ -1,15 +1,17 @@
-<div class="container">
-   <div class="row">
-    <div class="col-xs-12">
-      <div class="name-wrap">
-        <div class="name">
-          <h4>Avalie o(a) <%= @school.name %>, ou poste uma foto! </h4>
+<div class="back-img" style="height: 600px;">
+  <div class="container">
+     <div class="row">
+      <div class="col-xs-12">
+        <div class="name-wrap">
+          <div class="name">
+            <h4>Avalie o(a) <%= @school.name %>, ou poste uma foto! </h4>
+          </div>
+          <div class="link-voltar">
+            <%= link_to "Voltar", school_path(@school) %>
+          </div>
         </div>
-        <div class="link-voltar">
-          <%= link_to "Voltar", school_path(@school) %>
-        </div>
+      <p><%= render 'form' %></p>
       </div>
-    <p><%= render 'form' %></p>
     </div>
   </div>
 </div>

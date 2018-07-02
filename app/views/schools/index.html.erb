@@ -9,8 +9,8 @@
               <div class="details col-xs-12 col-md-offset-2 col-sm-8">
                 <a href=<%= school_path(school) %>>
                 <div class="card-wrapper">
-                  <div class="imgagewrap">
-                    <img class="schoolimage" src=<%= school.photo %>>
+                  <div class="imagewrap">
+                    <%= cl_image_tag school.photo, height: 115, width: 115, crop: :fill  %>
                   </div>
                   <div class="schoolinfo">
                     <div class="school-name"> <%= link_to school.name, school_path(school) %> </div>
