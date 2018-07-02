@@ -6,6 +6,27 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-School.create(name: "Colégio Santa Teresa de Jesus", address: "Av. da Cavalhada, 2250, Porto Alegre")
-School.create(name: "Instituto Santa Luzia", address: "Av. da Cavalhada, 3999, Porto Alegre")
-School.create(name: "Colégio Nossa Senhora do Rosário", address: "Praça Dom Sebastião, 2, Porto Alegre")
+School.destroy_all
+
+
+puts 'Creating 20 fake Schools...'
+20.times do
+  school = School.new(
+    name:    Faker::Company.name,
+    address: "#{Faker::Address.street_address}",
+    city: "#{Faker::Address.city}",
+    photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1530552913/School3.jpg",
+  )
+  school.save!
+  puts 'Creating 10 fake Reviews...'
+  10.times do
+    review = Review.new(
+    rating:  rand(0..5),
+    content: "#{Faker::Friends.quote}",
+      )
+    review.school = school
+    review.user = User.find(1)
+    review.save!
+    end
+end
+puts 'Finished!'

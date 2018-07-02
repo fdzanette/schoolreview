@@ -68,7 +68,7 @@
 
 .schoolinfo {
   position: absolute;
-  margin-left: 130px;
+  margin-left: 150px;
   font-size: 14px;
 }
 
@@ -80,4 +80,8 @@
   font-size: 24px;
   color: white;
   text-shadow: 5px 1px 6px black;
+}
+
+.stars p {
+  margin-bottom: -3px;
 }

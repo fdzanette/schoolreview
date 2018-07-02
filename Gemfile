@@ -1,9 +1,11 @@
 source 'https://rubygems.org'
 ruby '2.4.3'
 
+
 gem 'cloudinary'
 gem 'carrierwave', '~> 1.2'
 gem 'devise'
+gem 'faker'
 gem 'figaro'
 gem "geocoder"
 gem 'jbuilder', '~> 2.0'
