@@ -38,6 +38,7 @@
 .back-img {
   background-image: asset-url("quadro.jpg");
   opacity: 0.9;
+  min-height: 800px;
   height: 100%;
   background-size: cover !important;
 }
