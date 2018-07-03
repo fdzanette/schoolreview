@@ -7,7 +7,7 @@
           <h4> <%= @school.name%> </h4>
           </div>
           <div class="link-voltar">
-            <%= link_to "Voltar", schools_path(@schools) %>
+            <%= link_to 'Voltar', :back %>
           </div>
         </div>
         <div class="schoolshow">
@@ -34,7 +34,8 @@
 
               <div class="message-card">
                 <% count = 0 %>
-                <% @reviews.each do |review| %>
+                <% sorted = @reviews.order(:created_at) %>
+                <% sorted.reverse.each do |review| %>
                   <% if review.content.present? %>
                       <% user = review.user_id%>
                       <div class="message">
