@@ -24,14 +24,14 @@
                       <% end %>
                       <% empty.times do %>
                         <i class="far fa-star"></i>
-                      <% end %> </p> </div>
+                      <% end %> </p>
+                    </div>
                     <div class="nota"> <%= school.reviews.count %> avaliações </div>
                     <div class="nota"> Média: <%= school.reviews.average(:rating).to_f.round(1) %> </div>
                   </div>
                 </div>
             </div>
           <%end%>
-          <%console%>
       </div>
     </div>
   </div>

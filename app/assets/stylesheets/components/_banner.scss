@@ -2,7 +2,7 @@
   background-image: asset-url("quadro.jpg");
   opacity: 0.9;
   text-align: center;
-  height: 600px;
+  height: 680px;
   /* if you have a 70px navbar => height: calc(100vh - 70px); */
   background-size: cover !important;
   display: flex;
@@ -10,7 +10,9 @@
 }
 
 .banner-content {
-  margin-top: 100px;
+  margin-top: 90px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .banner h2, h3, h4 {

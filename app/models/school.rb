@@ -13,4 +13,11 @@ class School < ApplicationRecord
       tsearch: { prefix: true } # <-- now `superman batm` will return something!
     }
 
+
+  def self.pick_top_schools
+    School.where('city = ?', "New Abbie" )
+  end
+
+
+
 end

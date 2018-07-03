@@ -1,17 +1,47 @@
 <div class="banner" >
 
   <div class="banner-content">
-    <h3> <strong> Ranking de Escolas </strong></h3>
-    <h4>Leia as avaliações das instituições de ensino</h4>
-    <h4>Diga você mesmo o que acha da sua escola</h4>
-    <div class="formstyle">
-      <div class="searchfield"> <%= form_tag schools_path, method: :get do %>
-      <%= text_field_tag :query,
-      params[:query],
-      class: "form-control",
-      placeholder: "Buscar escola por cidade" %> </div>
-      <div class="searchbutton btn btn-success"> <%= link_to "Escolas", schools_path %> </div>
-      <% end %>
+    <div class="row">
+      <h3> <strong> Ranking de Escolas </strong></h3>
+      <h4>Leia as avaliações das instituições de ensino</h4>
+      <h4>Diga você mesmo o que acha da sua escola</h4>
+      <div class="formstyle">
+        <div class="searchfield"> <%= form_tag schools_path, method: :get do %>
+        <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Buscar escola por cidade" %> </div>
+        <div class="searchbutton btn btn-success"> <%= link_to "Escolas", schools_path %> </div>
+        <% end %>
+      </div>
     </div>
-  </div>
+    <div class="row">
+      <hr>
+        <p> Melhores escolas </p>
+        <% @schools.each do |school|%>
+          <div class="details col-xs-12 col-md-offset-2 col-sm-8">
+              <a href=<%= school_path(school) %>>
+              <div class="card-wrapper">
+                <div class="imagewrap">
+                  <%= cl_image_tag school.photo, height: 115, width: 115, crop: :fill  %>
+                </div>
+                <div class="schoolinfo">
+                  <div class="school-name"> <%= link_to school.name, school_path(school) %> </div>
+                  <div class="stars"> <p> <% empty = 5 - school.reviews.average(:rating).to_i %>
+                    <% school.reviews.average(:rating).to_i.times do %>
+                      <i class="fas fa-star"></i>
+                    <% end %>
+                    <% empty.times do %>
+                      <i class="far fa-star"></i>
+                    <% end %> </p>
+                  </div>
+                  <div class="nota"> <%= school.reviews.count %> avaliações </div>
+                  <div class="nota"> Média: <%= school.reviews.average(:rating).to_f.round(1) %> </div>
+                </div>
+              </div>
+          </div>
+        <%end%>
+      </div>
+    </div>
+
 </div>

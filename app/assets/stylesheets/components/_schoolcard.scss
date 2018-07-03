@@ -12,8 +12,6 @@
 
 }
 
-
-
 .school-name > a:hover {
   text-decoration: none;
 }
@@ -83,6 +81,19 @@
   color: white;
   text-shadow: 5px 1px 6px black;
 }
+
+.banner-content .schoolinfo .stars p {
+  color: black;
+  font-size: 16px;
+  padding: 5px;
+}
+
+.banner-content .school-name a {
+  color: black;
+  font-size: 14px;
+  padding: 3px;
+}
+
 
 .stars p {
   margin-bottom: -3px;
