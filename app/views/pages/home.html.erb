@@ -4,6 +4,14 @@
     <h3> <strong> Ranking de Escolas </strong></h3>
     <h4>Leia as avaliações das instituições de ensino</h4>
     <h4>Diga você mesmo o que acha da sua escola</h4>
-    <p class="btn btn-success"> <%= link_to "Escolas", schools_path %> </p>
+    <div class="formstyle">
+      <div class="searchfield"> <%= form_tag schools_path, method: :get do %>
+      <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Buscar escola por cidade" %> </div>
+      <div class="searchbutton btn btn-success"> <%= link_to "Escolas", schools_path %> </div>
+      <% end %>
+    </div>
   </div>
 </div>

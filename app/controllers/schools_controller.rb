@@ -2,7 +2,11 @@ class SchoolsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    @school = School.all
+    if params[:query].present?
+      @schools = School.search_by_city("#{params[:query]}")
+    else
+      @schools = School.all
+    end
   end
 
   def show
