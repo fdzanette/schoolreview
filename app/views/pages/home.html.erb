@@ -23,14 +23,16 @@
   <div class="container">
     <div class="row">
       <div class="col-md-offset-1">
-        <hr>
-        <p> Top 3 escolas </p>
-        <% topschools = School.pick_top_schools %>
-        <% topschools.each do |topschool|%>
-            <%= render "shared/schoolcard",
-            school: topschool,
-            display_name: true %>
-        <%end%>
+        <div class="escapebanner">
+          <hr>
+          <p> Top 3 escolas </p>
+          <% topschools = School.pick_top_schools %>
+          <% topschools.each do |topschool|%>
+              <%= render "shared/schoolcard",
+              school: topschool,
+              display_name: true %>
+          <%end%>
+        </div>
       </div>
     </div>
   </div>
