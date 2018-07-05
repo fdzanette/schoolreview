@@ -4,10 +4,10 @@
           <div class="styletitle">
             <% if School.search_by_city("#{params[:query]}").count != 0 %>
               <h3 class="text-center"> Escolas em <%=@schools.first.city%> </h3>
+            <% elsif params[:query].present? == false %>
+              <p class="text-center", style="color: white"> Mostrando todas as escolas!</p>
             <% elsif School.search_by_city("#{params[:query]}") == [] %>
               <h3 class="text-center"> Ainda não temos escolas cadastradas em <%= "#{params[:query]}" %> </h3>
-              <p class="text-center", style="color: white"> Mostrando todas as escolas!</p>
-            <% else %>
               <p class="text-center", style="color: white"> Mostrando todas as escolas!</p>
             <%end%>
           </div>
@@ -16,7 +16,6 @@
                 school: school,
                 display_name: true %>
           <%end%>
-      <%console%>
       </div>
   </div>
 </div>
