@@ -10,14 +10,13 @@ class School < ApplicationRecord
   pg_search_scope :search_by_city,
     against: [ :city ],
     using: {
-      tsearch: { prefix: true } # <-- now `superman batm` will return something!
+      tsearch: { prefix: true }
     }
 
 
   def self.pick_top_schools
-    School.where('city = ?', "New Abbie" )
+    @topschools = School.where('city = ?', "Schinnerchester" )
   end
-
 
 
 end

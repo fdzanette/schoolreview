@@ -2,7 +2,7 @@ class SchoolsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    if params[:query].present?
+    if School.search_by_city("#{params[:query]}").present?
       @schools = School.search_by_city("#{params[:query]}")
     else
       @schools = School.all
@@ -27,8 +27,10 @@ class SchoolsController < ApplicationController
 
   def create
     @school = School.new(school_params)
+    #@school.set_rating_average
     @school.save
   end
+
 
   def edit
 
@@ -45,6 +47,11 @@ class SchoolsController < ApplicationController
   private
 
   def school_params
-    params.require(:school).permit(:name, :address, :city, :photo)
+    params.require(:school).permit(:name, :address, :city, :photo, :rating_average)
   end
+
+  def set_rating_average
+    @school.rating_average = @school.reviews.average(:rating).to_i.round(2)
+  end
+
 end
