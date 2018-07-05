@@ -1,29 +1,37 @@
 <div class="banner" >
 
   <div class="banner-content">
-    <div class="row">
-      <h3> <strong> Ranking de Escolas </strong></h3>
-      <h4>Leia as avaliações das instituições de ensino</h4>
-      <h4>Diga você mesmo o que acha da sua escola</h4>
-      <div class="formstyle">
-        <div class="searchfield"> <%= form_tag schools_path, method: :get do %>
-        <%= text_field_tag :query,
-        params[:query],
-        class: "form-control",
-        placeholder: "Buscar escola por cidade" %> </div>
-        <div class="searchbutton btn btn-success"> <%= link_to "Escolas", schools_path %> </div>
-        <% end %>
+    <div class="container">
+      <div class="row">
+        <div class="text-center col-xs-12 col-md-offset-3 col-md-6 col-sm-6">
+          <h3> <strong> Ranking de Escolas </strong></h3>
+          <h4>Leia as avaliações das instituições de ensino</h4>
+          <h4>Diga você mesmo o que acha da sua escola</h4>
+          <div class="formstyle">
+            <div class="searchfield"> <%= form_tag schools_path, method: :get do %>
+            <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Buscar escola por cidade" %> </div>
+            <div class="searchbutton btn btn-success"> <%= link_to "Escolas", schools_path %> </div>
+            <% end %>
+          </div>
+        </div>
       </div>
     </div>
+  </div>
+  <div class="container">
     <div class="row">
-      <hr>
-        <p> Melhores escolas </p>
-        <% @topschools.each do |school|%>
+      <div class="col-md-offset-1">
+        <hr>
+        <p> Top 3 escolas </p>
+        <% topschools = School.pick_top_schools %>
+        <% topschools.each do |topschool|%>
             <%= render "shared/schoolcard",
-            school: school,
+            school: topschool,
             display_name: true %>
         <%end%>
+      </div>
     </div>
   </div>
-
 </div>

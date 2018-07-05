@@ -15,8 +15,17 @@ class School < ApplicationRecord
 
 
   def self.pick_top_schools
-    @topschools = School.where('city = ?', "Schinnerchester" )
+    @topschools = School.all
+    @reviews = Review.all
+    @best = @topschools.each do |topschool|
+      topschool.rating_average = topschool.reviews.average(:rating)
+    end
+    @top = @best.sort_by { |k| k[:rating_average] }.reverse!
+    @homebest = []
+    @homebest << @top.first
+    @homebest << @top.second
+    @homebest << @top.third
+    @homebest
   end
-
 
 end

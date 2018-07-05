@@ -27,7 +27,6 @@ class SchoolsController < ApplicationController
 
   def create
     @school = School.new(school_params)
-    #@school.set_rating_average
     @school.save
   end
 
@@ -48,10 +47,6 @@ class SchoolsController < ApplicationController
 
   def school_params
     params.require(:school).permit(:name, :address, :city, :photo, :rating_average)
-  end
-
-  def set_rating_average
-    @school.rating_average = @school.reviews.average(:rating).to_i.round(2)
   end
 
 end
