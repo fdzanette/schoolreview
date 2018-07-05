@@ -13,7 +13,7 @@
             params[:query],
             class: "form-control",
             placeholder: "Buscar escola por cidade" %> </div>
-            <div class="searchbutton btn btn-success"> <%= link_to "Escolas", schools_path %> </div>
+            <%= submit_tag 'Escolas' , class: "searchbutton btn btn-success"%>
             <% end %>
           </div>
         </div>
