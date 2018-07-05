@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180705145239) do
+ActiveRecord::Schema.define(version: 20180705191952) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -50,7 +50,7 @@ ActiveRecord::Schema.define(version: 20180705145239) do
     t.float "longitude"
     t.string "city"
     t.string "photo"
-    t.integer "rating_average"
+    t.decimal "rating_average"
   end
 
   create_table "users", force: :cascade do |t|

@@ -18,7 +18,7 @@ class School < ApplicationRecord
     @topschools = School.all
     @reviews = Review.all
     @best = @topschools.each do |topschool|
-      topschool.rating_average = topschool.reviews.average(:rating)
+      topschool.rating_average = topschool.reviews.average(:rating).to_f.round(1)
     end
     @top = @best.sort_by { |k| k[:rating_average] }.reverse!
     @homebest = []
