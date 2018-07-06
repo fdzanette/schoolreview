@@ -1,6 +1,7 @@
 class ReviewsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index]
   before_action :set_school, only: [:index, :new, :create, :all_photos]
+  before_action :set_review, only: [:edit, :update]
 
   def all_photos
     @photos = @school.reviews
@@ -60,6 +61,10 @@ class ReviewsController < ApplicationController
   end
 
   private
+
+  def set_review
+    @review = Review.find(params[:id])
+  end
 
   def set_school
     @school = School.find(params[:school_id])
