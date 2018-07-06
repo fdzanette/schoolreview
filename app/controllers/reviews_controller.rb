@@ -30,8 +30,33 @@ class ReviewsController < ApplicationController
     end
   end
 
-  def destroy
+  def edit
+    if @review.user != current_user
+      redirect_to root_path
+    end
+  end
 
+  def update
+    if @review.user != current_user
+      redirect_to root_path
+    else
+      @review.update(review_params)
+      if @review.save
+        redirect_to user_reviews_reviews_path
+      else
+        render :new
+      end
+    end
+  end
+
+  def destroy
+    if @review.user != current_user
+      flash[:alert] = "Esse comentário nao é seu!"
+      render :show
+    else
+      @review.destroy
+      redirect_to user_reviews_reviews_path
+    end
   end
 
   private
