@@ -10,6 +10,10 @@ class ReviewsController < ApplicationController
     @reviews = @school.reviews
   end
 
+  def user_reviews
+    @reviews = current_user.reviews
+  end
+
 
   def new
     @review = Review.new

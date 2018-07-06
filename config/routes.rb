@@ -11,5 +11,11 @@ Rails.application.routes.draw do
       end
     end
   end
+
+  resources :reviews do
+      collection do
+        get 'user_reviews'
+      end
+    end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
