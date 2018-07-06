@@ -17,8 +17,14 @@
               <h3><%= User.find(user).name %></h3>
               <p><%= review.created_at.to_date %></p>
               <div class="edit-del-wrap">
-              <a class="edit-del1" href="#"> Editar </a>
-              <a class="edit-del2" href="#"> Apagar </a>
+                <div class="edit-del1" href="#">
+                  <%= link_to "Editar" %>
+                </div>
+                <div class="edit-del2">
+                  <div edit-del2="<%review.id%>">
+                    <%= link_to "Apagar", review, method: :delete, remote: true %>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="message-body">

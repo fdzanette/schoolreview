@@ -4,7 +4,7 @@
   position: relative;
 }
 
-.edit-del1 {
+.edit-del1 a {
   position: absolute;
   margin-left: -15px;
   text-decoration: none;
@@ -12,20 +12,20 @@
   color: red;
 }
 
-.edit-del2 {
+.edit-del2 a {
   position: absolute;
-  margin-left: 25px;
+  margin-left: -55px;
   text-decoration: none;
   font-size: 12px;
   color: red;
 }
-.edit-del1:hover {
+.edit-del1 a:hover {
   text-decoration: none;
   color: red;
   font-weight: bold;
 }
 
-.edit-del2:hover {
+.edit-del2 a:hover {
   text-decoration: none;
   color: red;
   font-weight: bold;

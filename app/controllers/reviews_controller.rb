@@ -50,12 +50,12 @@ class ReviewsController < ApplicationController
   end
 
   def destroy
+    @review = Review.find(params[:id])
     if @review.user != current_user
       flash[:alert] = "Esse comentário nao é seu!"
       render :show
     else
       @review.destroy
-      redirect_to user_reviews_reviews_path
     end
   end
 
