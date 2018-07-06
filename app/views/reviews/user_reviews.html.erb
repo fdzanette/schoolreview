@@ -20,9 +20,9 @@
                 <div class="edit-del1">
                   <%= link_to "Editar", edit_review_path(review) %>
                 </div>
-                <div class="edit-del1">
+                <div class="edit-del2">
                   <div edit-del2="<%review.id%>">
-                    <%= link_to "Apagar", review, class: "edit-del2", method: :delete, remote: true %>
+                    <%= link_to "Apagar", review_path(review), method: :delete, remote: true %>
                   </div>
                 </div>
               </div>

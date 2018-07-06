@@ -12,7 +12,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :reviews, only: [:edit]
+  resources :reviews, only: [:edit, :destroy]
 
   resources :reviews do
       collection do
