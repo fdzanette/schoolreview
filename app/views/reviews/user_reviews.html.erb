@@ -17,8 +17,8 @@
               <h3><%= User.find(user).name %></h3>
               <p><%= review.created_at.to_date %></p>
               <div class="edit-del-wrap">
-                <div class="edit-del1" href="#">
-                  <%= link_to "Editar" %>
+                <div class="edit-del1">
+                  <%= link_to "Editar", edit_review_path(review) %>
                 </div>
                 <div class="edit-del2">
                   <div edit-del2="<%review.id%>">

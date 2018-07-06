@@ -12,6 +12,8 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :reviews, only: [:edit]
+
   resources :reviews do
       collection do
         get 'user_reviews'
