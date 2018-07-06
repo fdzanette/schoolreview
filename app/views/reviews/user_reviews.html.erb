@@ -12,7 +12,7 @@
       <% sorted.reverse.each do |review| %>
         <% if review.content.present? %>
         <% user = review.user_id%>
-          <div class="message">
+          <div class="message review.id">
             <div class="message-name">
               <h3><%= User.find(user).name %></h3>
               <p><%= review.created_at.to_date %></p>
