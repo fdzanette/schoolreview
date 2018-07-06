@@ -27,7 +27,7 @@
         <div class="aval-row">
           <div class="tab-wrap">
               <p id="aval-tab"> Avaliações</p>
-              <p id="fotolink"> <%= link_to "Fotos", school_reviews_path(@school) %> </p>
+              <p id="fotolink"> <%= link_to "Fotos", all_photos_school_reviews_path(@school) %> </p>
           </div>
           <div> <p> <%= link_to "Comentar", new_school_review_path(@school), class: "btn btn-primary" %></p> </div>
         </div>
@@ -63,7 +63,7 @@
                 <%end%>
               <% if count >= 5 %>
                   <div class="text-center link-voltar">
-                  <%= link_to "Ver todas", all_school_reviews_path(@school) %>
+                  <%= link_to "Ver todas", school_reviews_path(@school) %>
                   </div>
               <% end %>
               </div>

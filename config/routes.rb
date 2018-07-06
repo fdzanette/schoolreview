@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     resources :reviews, only: [:index, :new, :create, :all]
     resources :reviews do
       collection do
-        get 'all'
+        get 'all_photos'
       end
     end
   end

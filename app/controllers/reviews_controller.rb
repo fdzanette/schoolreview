@@ -1,14 +1,15 @@
 class ReviewsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index]
-  before_action :set_school, only: [:index, :new, :create, :all]
+  before_action :set_school, only: [:index, :new, :create, :all_photos]
 
-  def all
-    @reviews = @school.reviews
+  def all_photos
+    @photos = @school.reviews
   end
 
   def index
-    @photos = @school.reviews
+    @reviews = @school.reviews
   end
+
 
   def new
     @review = Review.new

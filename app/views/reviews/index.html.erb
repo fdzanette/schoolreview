@@ -1,24 +1,35 @@
-<div class="back-img" style="height: 100vh">
+<div class="back-img">
   <div class="container">
-    <div class="photo-header">
-      <div class="photo-post">
-        <h4> Fotos do(a) <%= @school.name %> </h4>
+    <div class="name-wrap">
+      <div>
+        <p> Todas as avaliações: <%= @school.name %></p>
       </div>
-      <div class="photolinks">
-        <div class="link-voltar"><%= link_to "Voltar", school_path(@school) %></div>
-        <div> <%= link_to "Nova foto!", new_school_review_path(@school), class: "btn-postar btn btn-primary" %> </div>
+      <div class="link-voltar">
+        <%= link_to "Voltar", school_path(@school) %>
       </div>
     </div>
-    <div class="row">
-      <% @photos.each do |pic|%>
-        <% if pic.photo.present? %>
-          <div class="col-xs-12 col-sm-6 col-md-3">
-            <div class="photorow">
-              <div class="photoajust"> <%= cl_image_tag pic.photo, height: 200, width: 260, crop: :fill %> </div>
+      <% sorted = @reviews.sort_by &:created_at %>
+      <% sorted.reverse.each do |review| %>
+        <% if review.content.present? %>
+        <% user = review.user_id%>
+          <div class="message">
+            <div class="message-name">
+              <h3><%= User.find(user).name %></h3>
+              <p><%= review.created_at.to_date %></p>
+            </div>
+            <div class="message-body">
+              <p><strong><%= review.content %></strong></p>
+              <p>Nota: <%= review.rating %></p>
+            </div>
+            <div class="rev-photo">
+              <% if review.photo.present? %>
+              <%= cl_image_tag review.photo, height: 80, width: 80, crop: :fill %>
+              <% else %>
+              <%= image_tag "Sem-imagem.jpg", height: 80, width: 80, crop: :fill %>
+              <%end%>
             </div>
           </div>
         <%end%>
       <%end%>
-    </div>
   </div>
 </div>
