@@ -1,21 +1,23 @@
 <div class="back-img">
   <div class="container">
-    <div class="row">
-          <div class="styletitle">
-            <% if School.search_by_city("#{params[:query]}").count != 0 %>
-              <h3 class="text-center"> Escolas em <%=@schools.first.city%> </h3>
-            <% elsif params[:query].present? == false %>
-              <p class="text-center", style="color: white; margin-top: 10px;"> Mostrando todas as escolas!</p>
-            <% elsif School.search_by_city("#{params[:query]}") == [] %>
-              <h3 class="text-center"> Ainda não temos escolas cadastradas em <%= "#{params[:query]}" %> </h3>
-              <p class="text-center", style="color: white"> Mostrando todas as escolas!</p>
-            <%end%>
-          </div>
-          <% @schools.each do |school| %>
-            <%= render 'shared/schoolcard',
-                school: school,
-                display_name: true %>
-          <%end%>
-    </div>
+      <div class="divcard">
+            <div class="styletitle">
+              <% if School.search_by_city("#{params[:query]}").count != 0 %>
+                <h3 class="text-center"> Escolas em <%=@schools.first.city%> </h3>
+              <% elsif params[:query].present? == false %>
+                <p class="text-center", style="color: white; margin-top: 10px;"> Mostrando todas as escolas!</p>
+              <% elsif School.search_by_city("#{params[:query]}") == [] %>
+                <h3 class="text-center"> Ainda não temos escolas cadastradas em <%= "#{params[:query]}" %> </h3>
+                <p class="text-center", style="color: white"> Mostrando todas as escolas!</p>
+              <%end%>
+            </div>
+            <div class="container">
+              <% @schools.each do |school| %>
+                <%= render 'shared/schoolcard',
+                    school: school,
+                    display_name: true %>
+              <%end%>
+            </div>
+      </div>
   </div>
 </div>
