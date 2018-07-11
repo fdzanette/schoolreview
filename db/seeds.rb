@@ -12,7 +12,7 @@ School.destroy_all
 puts 'Creating Schools...'
   school1 = School.new(
     name:    "Colégio Mãe de Deus",
-    address: "Rua Dr. Mário Totta, 1252",
+    address: "Rua Dr. Mário Totta, 1252 - Porto Alegre",
     city: "Porto Alegre",
     photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1531143571/MaeDeDeus.jpg",
   )
@@ -20,7 +20,7 @@ puts 'Creating Schools...'
 
   school2 = School.new(
     name:    "Colégio Adventista",
-    address: "Rua Camaquã, 534",
+    address: "Rua Camaquã, 534 - Porto Alegre",
     city: "Porto Alegre",
     photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1531143562/Adventista.jpg",
   )
@@ -28,7 +28,7 @@ puts 'Creating Schools...'
 
   school3 = School.new(
     name:    "Colegio Marista Ipanema",
-    address: "Av. Coronel Marcos, 1959",
+    address: "Av. Coronel Marcos, 1959 - Porto Alegre",
     city: "Porto Alegre",
     photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1531143564/MaristaIpanema.jpg",
   )
@@ -36,7 +36,7 @@ puts 'Creating Schools...'
 
   school4 = School.new(
     name:    "Colégio Leonardo Da Vinci",
-    address: "Av. Icaraí, 1879",
+    address: "Av. Icaraí, 1879 - Porto Alegre",
     city: "Porto Alegre",
     photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1531143564/DaVinci.jpg",
   )
@@ -44,7 +44,7 @@ puts 'Creating Schools...'
 
   school5 = School.new(
     name:    "Colégio Anchieta",
-    address: "Av. Nilo Peçanha, 1521,",
+    address: "Av. Nilo Peçanha, 1521 - Porto Alegre",
     city: "Porto Alegre",
     photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1531143573/Anchieta.png",
   )
@@ -52,7 +52,7 @@ puts 'Creating Schools...'
 
   school6 = School.new(
     name:    "Colégio Dom Bosco",
-    address: "Rua Eduardo Chartier, 360",
+    address: "Rua Eduardo Chartier, 360 - Porto Alegre",
     city: "Porto Alegre",
     photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1531143552/Bosco.jpg",
   )
@@ -60,7 +60,7 @@ puts 'Creating Schools...'
 
   school7 = School.new(
     name:    "Colégio João XXIII",
-    address: "Rua Sepé Tiaraju, 1.013",
+    address: "Rua Sepé Tiaraju, 1.013 - Porto Alegre",
     city: "Porto Alegre",
     photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1531143560/JoaoXXIII.jpg",
   )
@@ -68,7 +68,7 @@ puts 'Creating Schools...'
 
   school8 = School.new(
     name:    "Colégio Marista Rosário",
-    address: "Praça Dom Sebastião, 2",
+    address: "Praça Dom Sebastião, 2 - Porto Alegre",
     city: "Porto Alegre",
     photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1531143562/Rosario.jpg",
   )
@@ -76,7 +76,7 @@ puts 'Creating Schools...'
 
   school9 = School.new(
     name:    "Colégio Santa Teresa de Jesus",
-    address: "Av. da Cavalhada, 2250",
+    address: "Av. da Cavalhada, 2250 - Porto Alegre",
     city: "Porto Alegre",
     photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1531143571/STJesus.jpg",
   )
@@ -84,7 +84,7 @@ puts 'Creating Schools...'
 
   school10 = School.new(
     name:    "Colégio Santa Inês",
-    address: "Av. Protásio Alves, 2493",
+    address: "Av. Protásio Alves, 2493 - Porto Alegre",
     city: "Porto Alegre",
     photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1531143565/StInes.jpg",
   )
@@ -92,7 +92,7 @@ puts 'Creating Schools...'
 
   school11 = School.new(
     name:    "Colégio Nossa Senhora da Glória",
-    address: "Av. Prof. Oscar Pereira, 3052",
+    address: "Av. Prof. Oscar Pereira, 3052 - Porto Alegre",
     city: "Porto Alegre",
     photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1531143560/Gloria.jpg",
   )
@@ -100,7 +100,7 @@ puts 'Creating Schools...'
 
   school12 = School.new(
     name:    "Colégio Metodista Americano",
-    address: "Rua Dr. Lauro de Oliveira, 71",
+    address: "Rua Dr. Lauro de Oliveira, 71 - Porto Alegre",
     city: "Porto Alegre",
     photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1531143566/Americano.jpg",
   )
@@ -108,7 +108,7 @@ puts 'Creating Schools...'
 
   school13 = School.new(
     name:    "Colégio Pastor Dohms",
-    address: "R. Américo Vespúcio, 483",
+    address: "Rua Américo Vespúcio, 483 - Porto Alegre",
     city: "Porto Alegre",
     photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1531143574/domhs1.jpg",
   )
@@ -116,7 +116,7 @@ puts 'Creating Schools...'
 
   school14 = School.new(
     name:    "Colégio Maria Imaculada",
-    address: "Av. Padre Cacique, 1028",
+    address: "Av. Padre Cacique, 1028 - Porto Alegre",
     city: "Porto Alegre",
     photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1531143574/Imaculada.jpg",
   )
@@ -124,7 +124,7 @@ puts 'Creating Schools...'
 
   school15 = School.new(
     name:    "Colégio La Salle Dores",
-    address: "Rua Riachuelo, 800",
+    address: "Rua Riachuelo, 800 - Porto Alegre",
     city: "Porto Alegre",
     photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1531143573/LaSalle.jpg",
   )
