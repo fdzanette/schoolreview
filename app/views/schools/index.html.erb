@@ -11,13 +11,15 @@
                 <p class="text-center", style="color: white"> Mostrando todas as escolas!</p>
               <%end%>
             </div>
-            <div class="container">
-              <% @schools.each do |school| %>
-                <%= render 'shared/schoolcard',
-                    school: school,
-                    display_name: true %>
-              <%end%>
-            </div>
+      </div>
+      <div class="centercards">
+        <div class="center-card">
+          <% @schools.each do |school| %>
+            <%= render 'shared/schoolcard',
+                school: school,
+                display_name: true %>
+          <%end%>
+        </div>
       </div>
   </div>
 </div>

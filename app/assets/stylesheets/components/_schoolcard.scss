@@ -93,9 +93,7 @@
   padding: 3px;
 }
 
-
 .stars > p {
-  text-align: center;
   margin-bottom: -3px;
   color: black;
   font-size: 16px;
@@ -104,5 +102,14 @@
 .divard {
   width: 90%;
   margin: 0 auto;
+}
+
+.container .centercards {
+  margin: 0 auto;
+  width: 95%;
+}
+
+.center-card {
+  //width: 100%;
 }
 
