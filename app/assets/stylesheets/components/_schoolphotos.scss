@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 8px;
 }
 
 .photo-header h4 {
@@ -33,4 +34,9 @@
 .btn-postar {
   text-align: center;
   font-size: 16px;
+}
+
+.photorow {
+  border: 1px white solid;
+  padding: 3px;
 }
