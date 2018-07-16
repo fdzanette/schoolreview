@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 8px;
 }
 
 .photo-header h4 {
@@ -10,7 +11,7 @@
   text-shadow: 5px 1px 6px black;
 }
 .photoajust {
-  margin: 8px;
+  //margin: 1px;
   text-align: center;
 }
 
@@ -32,5 +33,15 @@
 
 .btn-postar {
   text-align: center;
-  font-size: 16px;
+  font-size: 14px;
+}
+
+.photorow {
+  margin: 5px;
+  border: 1px white solid;
+  padding: 3px;
+}
+
+.photoajustpic {
+  width: 100%;
 }

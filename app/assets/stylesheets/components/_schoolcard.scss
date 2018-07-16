@@ -1,4 +1,11 @@
+.centercard {
+  width: 92%;
+  margin: 0 auto;
+}
+
 .details {
+  display: grid;
+  grid-template-columns: auto;
   box-shadow: 2px 1px 2px black;
   background-color: white;
   font-size: 24px;
@@ -93,9 +100,7 @@
   padding: 3px;
 }
 
-
 .stars > p {
-  text-align: center;
   margin-bottom: -3px;
   color: black;
   font-size: 16px;
