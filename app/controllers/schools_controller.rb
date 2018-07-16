@@ -5,8 +5,10 @@ class SchoolsController < ApplicationController
   def index
     if School.search_by_city("#{params[:query]}").present?
       @schools = School.search_by_city("#{params[:query]}")
+      @schools = @schools.sort_by { |k| k[:rating_average].to_f }.reverse!
     else
       @schools = School.all
+      @schools = @schools.sort_by { |k| k[:rating_average].to_f }.reverse!
     end
   end
 
