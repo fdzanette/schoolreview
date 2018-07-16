@@ -25,6 +25,7 @@ class ReviewsController < ApplicationController
     @review.school = School.find(params[:school_id])
     @review.user = current_user
     if @review.save
+      @school.update(rating_average: @school.reviews.average(:rating).to_f)
       redirect_to school_path(@school)
     else
       render :new

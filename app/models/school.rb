@@ -8,7 +8,7 @@ class School < ApplicationRecord
 
   include PgSearch
   pg_search_scope :search_by_city,
-    against: [ :city ],
+    against: [ :city, :name ],
     using: {
       tsearch: { prefix: true }
     }

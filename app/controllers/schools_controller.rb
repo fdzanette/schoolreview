@@ -1,16 +1,18 @@
 class SchoolsController < ApplicationController
+  before_action :set_school, only: [:show, :update]
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
     if School.search_by_city("#{params[:query]}").present?
       @schools = School.search_by_city("#{params[:query]}")
+      @schools = @schools.sort_by { |k| k[:rating_average].to_f }.reverse!
     else
       @schools = School.all
+      @schools = @schools.sort_by { |k| k[:rating_average].to_f }.reverse!
     end
   end
 
   def show
-    @school = School.find(params[:id])
     @review = Review.new
     @reviews = @school.reviews
     @markers =
@@ -36,7 +38,7 @@ class SchoolsController < ApplicationController
   end
 
   def update
-
+    @school.update(school_params)
   end
 
   def destroy
@@ -49,4 +51,7 @@ class SchoolsController < ApplicationController
     params.require(:school).permit(:name, :address, :city, :photo, :rating_average)
   end
 
+  def set_school
+    @school = School.find(params[:id])
+  end
 end
