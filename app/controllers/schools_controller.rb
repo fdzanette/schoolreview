@@ -1,4 +1,5 @@
 class SchoolsController < ApplicationController
+  before_action :set_school, only: [:show, :update]
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
@@ -10,7 +11,6 @@ class SchoolsController < ApplicationController
   end
 
   def show
-    @school = School.find(params[:id])
     @review = Review.new
     @reviews = @school.reviews
     @markers =
@@ -36,7 +36,7 @@ class SchoolsController < ApplicationController
   end
 
   def update
-
+    @school.update(school_params)
   end
 
   def destroy
@@ -49,4 +49,7 @@ class SchoolsController < ApplicationController
     params.require(:school).permit(:name, :address, :city, :photo, :rating_average)
   end
 
+  def set_school
+    @school = School.find(params[:id])
+  end
 end
