@@ -1,4 +1,11 @@
+.centercard {
+  width: 92%;
+  margin: 0 auto;
+}
+
 .details {
+  display: grid;
+  grid-template-columns: auto;
   box-shadow: 2px 1px 2px black;
   background-color: white;
   font-size: 24px;
@@ -102,14 +109,5 @@
 .divard {
   width: 90%;
   margin: 0 auto;
-}
-
-.container .centercards {
-  margin: 0 auto;
-  width: 95%;
-}
-
-.center-card {
-  //width: 100%;
 }
 

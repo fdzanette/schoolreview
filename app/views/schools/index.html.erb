@@ -12,14 +12,12 @@
               <%end%>
             </div>
       </div>
-      <div class="centercards">
-        <div class="center-card">
-          <% @schools.each do |school| %>
-            <%= render 'shared/schoolcard',
-                school: school,
-                display_name: true %>
-          <%end%>
-        </div>
+      <div class="centercard">
+      <% @schools.each do |school| %>
+        <%= render 'shared/schoolcard',
+            school: school,
+            display_name: true %>
+      <%end%>
       </div>
   </div>
 </div>
