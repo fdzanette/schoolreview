@@ -6,3 +6,18 @@
 .form-actions {
   margin-bottom: 5px;
 }
+
+.form-actions a:hover {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.colorform a {
+  color: white;
+  text-shadow: 5px 1px 6px black;
+}
+
+.colorform a:hover {
+  font-weight: bold;
+  text-decoration: none;
+}
