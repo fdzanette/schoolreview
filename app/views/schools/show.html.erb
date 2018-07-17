@@ -7,7 +7,11 @@
           <h4> <%= @school.name%> </h4>
           </div>
           <div class="link-voltar">
-            <%= link_to 'Voltar', :back %>
+            <%if flash[:last_search_path] != nil %>
+              <%= link_to "Voltar", flash[:last_search_path] %>
+            <% else %>
+              <%= link_to "Voltar", schools_path %>
+            <% end %>
           </div>
         </div>
         <div class="schoolshow">
@@ -20,6 +24,7 @@
                     <% end %> (<%= @school.reviews.count %> Avaliações) </p>
           <p> Endereço: <%= @school.address %> </p>
         </div>
+        <%console%>
       </div>
     </div>
     <div class="row">

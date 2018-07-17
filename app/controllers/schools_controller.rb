@@ -10,6 +10,7 @@ class SchoolsController < ApplicationController
       @schools = School.all
       @schools = @schools.sort_by { |k| k[:rating_average].to_f }.reverse!
     end
+    flash[:last_search_path] = request.url
   end
 
   def show
