@@ -1,132 +1,125 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
 
-School.destroy_all
+#School.destroy_all
 
 
 puts 'Creating Schools...'
   school1 = School.new(
-    name:    "Colégio Mãe de Deus",
-    address: "Rua Dr. Mário Totta, 1252 - Porto Alegre",
-    city: "Porto Alegre",
-    photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1531143571/MaeDeDeus.jpg",
+    name:    " Colégio Anglo Morumbi",
+    address: "Avenida Marechal Juarez Távora, 570 - São Paulo",
+    city: "São Paulo",
+    photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1531837135/AngloMorumbi.jpg",
   )
   school1.save!
 
   school2 = School.new(
-    name:    "Colégio Adventista",
-    address: "Rua Camaquã, 534 - Porto Alegre",
-    city: "Porto Alegre",
-    photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1531143562/Adventista.jpg",
+    name:    "Colégio Albert Sabin",
+    address: "Avenida Darcy Reis, 1901 - São Paulo",
+    city: "São Paulo",
+    photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1531837130/ASabin.gif",
   )
   school2.save!
 
   school3 = School.new(
-    name:    "Colegio Marista Ipanema",
-    address: "Av. Coronel Marcos, 1959 - Porto Alegre",
-    city: "Porto Alegre",
-    photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1531143564/MaristaIpanema.jpg",
+    name:    "All Together Bilingual School",
+    address: "Avenida Rebouças, 2320 - São Paulo",
+    city: "São Paulo",
+    photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1531837130/AllTogether.jpg",
   )
   school3.save!
 
   school4 = School.new(
-    name:    "Colégio Leonardo Da Vinci",
-    address: "Av. Icaraí, 1879 - Porto Alegre",
-    city: "Porto Alegre",
-    photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1531143564/DaVinci.jpg",
+    name:    "Colégio Assunção",
+    address: "Alameda Lorena, 665 - São Paulo",
+    city: "São Paulo",
+    photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1531837128/Assun%C3%A7%C3%A3o.jpg",
   )
   school4.save!
 
   school5 = School.new(
-    name:    "Colégio Anchieta",
-    address: "Av. Nilo Peçanha, 1521 - Porto Alegre",
-    city: "Porto Alegre",
-    photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1531143573/Anchieta.png",
+    name:    "Colégio Dante Alighieri",
+    address: "Alameda Jaú, 1061 - São Paulo",
+    city: "São Paulo",
+    photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1531837127/Dante.jpg",
   )
   school5.save!
 
   school6 = School.new(
-    name:    "Colégio Dom Bosco",
-    address: "Rua Eduardo Chartier, 360 - Porto Alegre",
-    city: "Porto Alegre",
-    photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1531143552/Bosco.jpg",
+    name:    "Colégio Decisão",
+    address: "Rua Antônio Gil, 904 - São Paulo",
+    city: "São Paulo",
+    photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1531837128/Decis%C3%A3o.jpg",
   )
   school6.save!
 
   school7 = School.new(
-    name:    "Colégio João XXIII",
-    address: "Rua Sepé Tiaraju, 1.013 - Porto Alegre",
-    city: "Porto Alegre",
-    photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1531143560/JoaoXXIII.jpg",
+    name:    "Colégio dos Santos Anjos",
+    address: "Avenida Iraí, 1330 - São Paulo",
+    city: "São Paulo",
+    photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1531837131/SantosAnjos.jpg",
   )
   school7.save!
 
   school8 = School.new(
-    name:    "Colégio Marista Rosário",
-    address: "Praça Dom Sebastião, 2 - Porto Alegre",
-    city: "Porto Alegre",
-    photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1531143562/Rosario.jpg",
+    name:    "Colégio Equipe",
+    address: "Rua São Vicente de Paula, 374 - São Paulo",
+    city: "São Paulo",
+    photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1531837131/Equipe.jpg",
   )
   school8.save!
 
   school9 = School.new(
-    name:    "Colégio Santa Teresa de Jesus",
-    address: "Av. da Cavalhada, 2250 - Porto Alegre",
-    city: "Porto Alegre",
-    photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1531143571/STJesus.jpg",
+    name:    "Colégio Franciscano Pio XII",
+    address: "Rua Colégio Pio XII, 233 - São Paulo",
+    city: "São Paulo",
+    photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1531837135/PioXII.jpg",
   )
   school9.save!
 
   school10 = School.new(
-    name:    "Colégio Santa Inês",
-    address: "Av. Protásio Alves, 2493 - Porto Alegre",
-    city: "Porto Alegre",
-    photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1531143565/StInes.jpg",
+    name:    "Colégio Franciscano São Miguel Arcanjo",
+    address: "Rua Campos Novos, 153 - São Paulo",
+    city: "São Paulo",
+    photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1531837126/Arcanjo.jpg",
   )
   school10.save!
 
   school11 = School.new(
-    name:    "Colégio Nossa Senhora da Glória",
-    address: "Av. Prof. Oscar Pereira, 3052 - Porto Alegre",
-    city: "Porto Alegre",
-    photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1531143560/Gloria.jpg",
+    name:    "Colégio Henrique I",
+    address: "Rua Miguel Gonçalves Correia, 415 - São Paulo",
+    city: "São Paulo",
+    photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1531837125/Henrique1.jpg",
   )
   school11.save!
 
   school12 = School.new(
-    name:    "Colégio Metodista Americano",
-    address: "Rua Dr. Lauro de Oliveira, 71 - Porto Alegre",
-    city: "Porto Alegre",
-    photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1531143566/Americano.jpg",
+    name:    "Colégio Itatiaia - Morumbi",
+    address: "Rua Custódio de Oliveira, 310 - São Paulo",
+    city: "São Paulo",
+    photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1531837125/Itatiaia.jpg",
   )
   school12.save!
 
   school13 = School.new(
-    name:    "Colégio Pastor Dohms",
-    address: "Rua Américo Vespúcio, 483 - Porto Alegre",
-    city: "Porto Alegre",
-    photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1531143574/domhs1.jpg",
+    name:    "Colégio Itatiaia - Moema",
+    address: "Avenida Jandira, 512 - São Paulo",
+    city: "São Paulo",
+    photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1531837125/Itatiaia.jpg",
   )
   school13.save!
 
   school14 = School.new(
-    name:    "Colégio Maria Imaculada",
-    address: "Av. Padre Cacique, 1028 - Porto Alegre",
-    city: "Porto Alegre",
-    photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1531143574/Imaculada.jpg",
+    name:    "Colégio Madre Cabrini",
+    address: "Rua Madre Cabrini, 36 - São Paulo",
+    city: "São Paulo",
+    photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1531837126/Madre_Cabrini.jpg",
   )
   school14.save!
 
   school15 = School.new(
-    name:    "Colégio La Salle Dores",
-    address: "Rua Riachuelo, 800 - Porto Alegre",
-    city: "Porto Alegre",
-    photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1531143573/LaSalle.jpg",
+    name:    "Colégio Maria Imaculada",
+    address: "Avenida Bernardino de Campos, 79 - São Paulo",
+    city: "São Paulo",
+    photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1531837126/MariaImaculadaSp.jpg",
   )
   school15.save!
 
