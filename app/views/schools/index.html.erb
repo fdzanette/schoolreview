@@ -20,6 +20,6 @@
       <%end%>
       </div>
   </div>
-  <div class="numeration"> <%= will_paginate @schools, renderer: BootstrapPagination::Rails %> </div>
+  <div class="numeration"> <%= will_paginate @schools, renderer: BootstrapPagination::Rails, :previous_label => '<<', :next_label => '>>' %> </div>
 </div>
 
