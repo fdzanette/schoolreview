@@ -2,6 +2,7 @@
   <div class="container">
       <div class="divcard">
             <div class="styletitle">
+              <%= will_paginate @schools %>
               <% if School.search_by_city("#{params[:query]}").count != 0 %>
                 <h4 class="text-center"> Resultado da busca: <%= "#{params[:query]}" %> </h4>
               <% elsif params[:query].present? == false %>
@@ -21,3 +22,4 @@
       </div>
   </div>
 </div>
+
