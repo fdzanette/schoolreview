@@ -12,12 +12,12 @@
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu"> </p>
             <li>
               <%= link_to destroy_user_session_path, method: :delete do %>
-                <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
+                  <p> <%= t(".sign_out", default: "Log out") %> </p>
               <% end %>
             </li>
             <li>
               <%= link_to user_reviews_reviews_path do %>
-              <i class="fa fa-sign-out"> <p> Meus posts </p> </i>
+               <p> Meus posts </p>
               <%end%>
             </li>
           </ul>

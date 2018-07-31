@@ -79,3 +79,16 @@
   border-left: 1px solid #E6E6E6;
   border-top: 1px solid #E6E6E6;
 }
+
+.dropdown-menu p {
+  font-size: 14px;
+}
+
+.dropdown-menu p:hover {
+  color: darkgray;
+  font-weight: bold;
+}
+
+.dropdown-menu {
+  min-width: 120px;
+}
