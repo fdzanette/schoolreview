@@ -57,6 +57,10 @@
                         <div class="message-body">
                           <p><strong><%= review.content %></strong></p>
                           <p> Nota: <%= review.rating %></p>
+                          <%= link_to like_school_review_path(@school, id: review.id), method: :put, class: "btn btn-default" do %>
+                            <i class="glyphicon glyphicon-thumbs-up"></i>
+                          <%end%>
+                          <%= review.get_up_votes.size %>
                         </div>
                         <div class="rev-photo">
                         <% if review.photo.present? %>
