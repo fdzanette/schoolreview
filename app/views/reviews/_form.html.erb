@@ -1,6 +1,6 @@
   <div class="form-content">
     <%= simple_form_for [@school, @review] do |f| %>
-      <%= f.input :content, label: "Comentário" %>
+      <%= f.input :content, as: :text, label: "Comentário" %>
       <%= f.input :rating, label: "Nota", collection: [0, 1, 2, 3, 4, 5] %>
       <%= f.input :photo, label: "Foto" %>
       <%= f.input :photo_cache, as: :hidden %>

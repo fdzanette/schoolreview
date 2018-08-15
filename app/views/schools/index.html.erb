@@ -3,11 +3,11 @@
       <div class="divcard">
             <div class="styletitle">
               <% if School.search_by_city("#{params[:query]}").count != 0 %>
-                <h4 class="text-center"> Resultado da busca: <%= "#{params[:query]}" %> </h4>
+                <h5 class="text-center", style="color: white;"> Escolas em: <%= "#{params[:query]}" %> </h5>
               <% elsif params[:query].present? == false %>
-                <p class="text-center", style="color: white; margin-top: 10px;"> Mostrando todas as escolas!</p>
+                <p class="text-center", style="color: white; margin-top: 10px;"> Todas as escolas!</p>
               <% elsif School.search_by_city("#{params[:query]}") == [] %>
-                <h4 class="text-center"> Ainda não temos escolas cadastradas em <%= "#{params[:query]}" %> </h4>
+                <h5 class="text-center", style="color: white;"> Ainda não temos escolas cadastradas em <%= "#{params[:query]}" %> </h5>
               <%end%>
                 <p class="link-voltar"> <%= link_to "Nova busca", root_path %> </p>
             </div>
@@ -20,4 +20,6 @@
       <%end%>
       </div>
   </div>
+  <div class="numeration"> <%= will_paginate @schools, renderer: BootstrapPagination::Rails, :previous_label => '<<', :next_label => '>>' %> </div>
 </div>
+

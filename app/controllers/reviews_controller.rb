@@ -1,7 +1,7 @@
 class ReviewsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index]
-  before_action :set_school, only: [:index, :new, :create, :all_photos]
-  before_action :set_review, only: [:edit, :update]
+  before_action :set_school, only: [:index, :new, :create, :all_photos, :up_vote]
+  before_action :set_review, only: [:edit, :update, :up_vote]
 
   def all_photos
     @photos = @school.reviews
@@ -70,6 +70,11 @@ class ReviewsController < ApplicationController
       end
 
     end
+  end
+
+  def up_vote
+    @review.upvote_by current_user
+    redirect_back(fallback_location: root_path)
   end
 
   private

@@ -20,6 +20,8 @@
             <div class="message-body">
               <p><strong><%= review.content %></strong></p>
               <p>Nota: <%= review.rating %></p>
+              <i class="glyphicon glyphicon-thumbs-up"></i>
+              <%= review.get_up_votes.size %>
             </div>
             <div class="rev-photo">
               <% if review.photo.present? %>

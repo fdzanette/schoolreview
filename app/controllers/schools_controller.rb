@@ -1,3 +1,5 @@
+require 'will_paginate/array'
+
 class SchoolsController < ApplicationController
   before_action :set_school, only: [:show, :update]
   skip_before_action :authenticate_user!, only: [:index, :show]
@@ -6,9 +8,11 @@ class SchoolsController < ApplicationController
     if School.search_by_city("#{params[:query]}").present?
       @schools = School.search_by_city("#{params[:query]}")
       @schools = @schools.sort_by { |k| k[:rating_average].to_f }.reverse!
+      @schools = @schools.paginate(:page => params[:page], :per_page => 9)
     else
       @schools = School.all
       @schools = @schools.sort_by { |k| k[:rating_average].to_f }.reverse!
+      @schools = @schools.paginate(:page => params[:page], :per_page => 9)
     end
     flash[:last_search_path] = request.url
   end

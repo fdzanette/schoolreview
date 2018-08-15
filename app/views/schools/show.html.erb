@@ -15,13 +15,20 @@
           </div>
         </div>
         <div class="schoolshow">
-          <p> <% empty = 5 - @reviews.average(:rating).to_i %>
-                    <% @reviews.average(:rating).to_i.times do %>
-                      <i class="fas fa-star"></i>
-                    <% end %>
-                    <% empty.times do %>
-                      <i class="far fa-star"></i>
-                    <% end %> (<%= @school.reviews.count %> Avaliações) </p>
+          <p> <% empty = 5 - @school.reviews.average(:rating).to_i %>
+            <% @school.reviews.average(:rating).to_i.times do %>
+              <i class="fas fa-star"></i>
+            <% end %>
+              <% if @school.reviews.average(:rating).to_f - @school.reviews.average(:rating).to_i == 0  %>
+                <% empty.times do %>
+                  <i class="far fa-star"></i>
+                  <%end%>
+              <% else %>
+                  <i class="fa fa-star-half-o"></i>
+                  <% (empty - 1).times do %>
+                    <i class="far fa-star"></i>
+                  <% end %>
+              <% end %> (<%= @school.reviews.count %> Avaliações) </p>
           <p> Endereço: <%= @school.address %> </p>
         </div>
       </div>
@@ -50,6 +57,10 @@
                         <div class="message-body">
                           <p><strong><%= review.content %></strong></p>
                           <p> Nota: <%= review.rating %></p>
+                          <%= link_to like_school_review_path(@school, id: review.id), method: :put, class: "btn btn-default" do %>
+                            <i class="glyphicon glyphicon-thumbs-up"></i>
+                          <%end%>
+                          <%= review.get_up_votes.size %>
                         </div>
                         <div class="rev-photo">
                         <% if review.photo.present? %>
