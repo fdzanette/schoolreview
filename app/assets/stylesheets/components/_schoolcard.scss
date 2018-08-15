@@ -21,6 +21,10 @@
   text-decoration: none;
 }
 
+.school-name {
+  margin-right: 3px;
+}
+
 .name-wrap {
   display: flex;
   justify-content: space-between;
@@ -59,7 +63,7 @@
 .card-wrapper {
   display: flex;
   justify-content: space-between;
-  position: relative;
+  //position: relative;
 }
 
 .imagewrap {
@@ -75,7 +79,7 @@
 .schoolinfo {
   position: absolute;
   margin-left: 150px;
-  font-size: 14px;
+  font-size: 13px;
   text-align: left;
 }
 
@@ -130,7 +134,7 @@
 .stars > p {
   margin-bottom: -3px;
   color: black;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .divard {
