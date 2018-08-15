@@ -48,16 +48,16 @@
   background-size: cover !important;
 }
 
-.row hr {
-  position: absolute;
-  margin-top: 45px;
-  margin-right: -15px;
-  width: 1040px;
-}
+// .row hr {
+//   position: absolute;
+//   margin-top: 45px;
+//   margin-right: -15px;
+//   width: 1040px;
+// }
 
-.container .littecardmargin {
-  margin-left: -15px;
-}
+// .container .littecardmargin {
+//   margin-left: -15px;
+// }
 
 .escapebanner p {
 
@@ -67,4 +67,8 @@
   margin-bottom: 10px;
   margin-top: 18px;
 
+}
+
+.escapebanner hr {
+margin-bottom: 0px;
 }
