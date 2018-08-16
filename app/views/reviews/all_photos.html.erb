@@ -15,7 +15,15 @@
           <div class="col-xs-12 col-sm-6 col-md-4">
             <div class="photorow">
               <div class="photoajust">
+                <div class="row-img">
                 <%= cl_image_tag pic.photo, height: 240, width: 310, crop: :fill, class: "photoajustpic" %>
+                </div>
+                <div class="row-img-icons">
+                  <%= link_to like_school_review_path(@school, id: pic), method: :put, class: "btn btn-default" do %>
+                    <i class="glyphicon glyphicon-thumbs-up"></i>
+                  <%end%>
+                  <p> <%= pic.get_up_votes.size %> </p>
+                </div>
               </div>
             </div>
           </div>
