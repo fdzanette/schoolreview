@@ -4,122 +4,122 @@
 
 puts 'Creating Schools...'
   school1 = School.new(
-    name:    " Colégio Anglo Morumbi",
-    address: "Avenida Marechal Juarez Távora, 570 - São Paulo",
-    city: "São Paulo",
-    photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1531837135/AngloMorumbi.jpg",
+    name:    "Colégio Sarte COC",
+    address: "Rua João Varela, 184 - Salvador",
+    city: "Salvador",
+    photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1534339505/Sarte.jpg",
   )
   school1.save!
 
   school2 = School.new(
-    name:    "Colégio Albert Sabin",
-    address: "Avenida Darcy Reis, 1901 - São Paulo",
-    city: "São Paulo",
-    photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1531837130/ASabin.gif",
+    name:    "Colégio 2 de Julho",
+    address: "Av. Leovigildo Filgueiras, 81  - Salvador",
+    city: "Salvador",
+    photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1534339553/2dejulho.jpg",
   )
   school2.save!
 
   school3 = School.new(
-    name:    "All Together Bilingual School",
-    address: "Avenida Rebouças, 2320 - São Paulo",
-    city: "São Paulo",
-    photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1531837130/AllTogether.jpg",
+    name:    "Colégio Anchieta",
+    address: "Praça Padre Anchieta, 126 - Salvador",
+    city: "Salvador",
+    photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1534339516/AnchietaSsa.jpg",
   )
   school3.save!
 
   school4 = School.new(
-    name:    "Colégio Assunção",
-    address: "Alameda Lorena, 665 - São Paulo",
-    city: "São Paulo",
-    photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1531837128/Assun%C3%A7%C3%A3o.jpg",
+    name:    "Colégio Antônio Vieira",
+    address: "Av. Leovigildo Filgueiras, 683 - Salvador",
+    city: "Salvador",
+    photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1534339521/ColegioAntonioVieira.jpg",
   )
   school4.save!
 
   school5 = School.new(
-    name:    "Colégio Dante Alighieri",
-    address: "Alameda Jaú, 1061 - São Paulo",
-    city: "São Paulo",
-    photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1531837127/Dante.jpg",
+    name:    "Colégio Integral",
+    address: "Rua Fernando Menezes de Goes, 570 - Salvador",
+    city: "Salvador",
+    photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1534339514/Integral.jpg",
   )
   school5.save!
 
   school6 = School.new(
-    name:    "Colégio Decisão",
-    address: "Rua Antônio Gil, 904 - São Paulo",
-    city: "São Paulo",
-    photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1531837128/Decis%C3%A3o.jpg",
+    name:    "Colégio Gregor Mendel",
+    address: "Rua Magno Valente, 571 - Salvador",
+    city: "Salvador",
+    photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1534339517/Mendel.jpg",
   )
   school6.save!
 
   school7 = School.new(
-    name:    "Colégio dos Santos Anjos",
-    address: "Avenida Iraí, 1330 - São Paulo",
-    city: "São Paulo",
-    photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1531837131/SantosAnjos.jpg",
+    name:    "Colégio Módulo",
+    address: "Av. Prof. Magalhães Neto, 1177 - Salvador",
+    city: "Salvador",
+    photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1534339520/Modulo.jpg",
   )
   school7.save!
 
   school8 = School.new(
-    name:    "Colégio Equipe",
-    address: "Rua São Vicente de Paula, 374 - São Paulo",
-    city: "São Paulo",
-    photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1531837131/Equipe.jpg",
+    name:    "Colégio São Paulo",
+    address: "Rua Luís Portela da Silva, 628  - Salvador",
+    city: "Salvador",
+    photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1534339513/S%C3%A3oPaulo.jpg",
   )
   school8.save!
 
   school9 = School.new(
-    name:    "Colégio Franciscano Pio XII",
-    address: "Rua Colégio Pio XII, 233 - São Paulo",
-    city: "São Paulo",
-    photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1531837135/PioXII.jpg",
+    name:    "Escola Pan Americana da Bahia",
+    address: "Av. Tamburugy, SN - Salvador",
+    city: "Salvador",
+    photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1534339509/Panamericano.jpg",
   )
   school9.save!
 
   school10 = School.new(
-    name:    "Colégio Franciscano São Miguel Arcanjo",
-    address: "Rua Campos Novos, 153 - São Paulo",
-    city: "São Paulo",
-    photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1531837126/Arcanjo.jpg",
+    name:    "Instituto Social Da Bahia Isba",
+    address: "Rua Macapá, 128 - Salvador",
+    city: "Salvador",
+    photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1534339517/ISBA.jpg",
   )
   school10.save!
 
   school11 = School.new(
-    name:    "Colégio Henrique I",
-    address: "Rua Miguel Gonçalves Correia, 415 - São Paulo",
-    city: "São Paulo",
-    photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1531837125/Henrique1.jpg",
+    name:    "Colegio Candido Portinari",
+    address: "Rua Adelaíde Fernandes da Costa, 487 - Salvador",
+    city: "Salvador",
+    photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1534339505/Portinari.webp",
   )
   school11.save!
 
   school12 = School.new(
-    name:    "Colégio Itatiaia - Morumbi",
-    address: "Rua Custódio de Oliveira, 310 - São Paulo",
-    city: "São Paulo",
-    photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1531837125/Itatiaia.jpg",
+    name:    "Colégio Oficina",
+    address: "Rua Miguel Navarro Y Cañizares, 423 - Salvador",
+    city: "Salvador",
+    photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1534339521/Oficina.jpg",
   )
   school12.save!
 
   school13 = School.new(
-    name:    "Colégio Itatiaia - Moema",
-    address: "Avenida Jandira, 512 - São Paulo",
-    city: "São Paulo",
-    photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1531837125/Itatiaia.jpg",
+    name:    "Colégio Nossa Senhora da Luz",
+    address: "Rua Ceará, 852 - Salvador",
+    city: "Salvador",
+    photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1534339515/NossasraLuz.jpg",
   )
   school13.save!
 
   school14 = School.new(
-    name:    "Colégio Madre Cabrini",
-    address: "Rua Madre Cabrini, 36 - São Paulo",
-    city: "São Paulo",
-    photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1531837126/Madre_Cabrini.jpg",
+    name:    "Colégio Anglo-Brasileiro",
+    address: "Rua do Mangalô, 156 - Salvador",
+    city: "Salvador",
+    photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1534339504/Anglo-brasileiro.jpg",
   )
   school14.save!
 
   school15 = School.new(
-    name:    "Colégio Maria Imaculada",
-    address: "Avenida Bernardino de Campos, 79 - São Paulo",
-    city: "São Paulo",
-    photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1531837126/MariaImaculadaSp.jpg",
+    name:    "Colégio Salesiano do Salvador",
+    address: "​Praça Conselheiro Almeida Couto, 374 - Salvador",
+    city: "Salvador",
+    photo: "http://res.cloudinary.com/dmcyzy6ik/image/upload/v1534339520/colegio-salesiano.jpg",
   )
   school15.save!
 

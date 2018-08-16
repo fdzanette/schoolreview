@@ -3,7 +3,7 @@
       <div class="divcard">
             <div class="styletitle">
               <% if School.search_by_city("#{params[:query]}").count != 0 %>
-                <h5 class="text-center", style="color: white;"> Escolas em: <%= "#{params[:query]}" %> </h5>
+                <h5 class="text-center", style="color: white;"> Resultado: <%= "#{params[:query]}" %> </h5>
               <% elsif params[:query].present? == false %>
                 <p class="text-center", style="color: white; margin-top: 10px;"> Todas as escolas!</p>
               <% elsif School.search_by_city("#{params[:query]}") == [] %>

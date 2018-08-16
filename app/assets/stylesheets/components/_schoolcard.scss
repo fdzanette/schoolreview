@@ -10,7 +10,7 @@
   background-color: rgb(240, 240, 240);
   font-size: 24px;
   padding: 15px;
-  margin: 8px;
+  margin: 6px;
   border-radius: 1px;
   min-height: 150px;
   max-width: 330px;
@@ -19,6 +19,10 @@
 
 .school-name > a:hover {
   text-decoration: none;
+}
+
+.school-name {
+  margin-right: 3px;
 }
 
 .name-wrap {
@@ -59,7 +63,7 @@
 .card-wrapper {
   display: flex;
   justify-content: space-between;
-  position: relative;
+  //position: relative;
 }
 
 .imagewrap {
@@ -75,7 +79,7 @@
 .schoolinfo {
   position: absolute;
   margin-left: 150px;
-  font-size: 14px;
+  font-size: 13px;
   text-align: left;
 }
 
@@ -130,7 +134,7 @@
 .stars > p {
   margin-bottom: -3px;
   color: black;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .divard {
