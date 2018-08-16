@@ -1,0 +1,26 @@
+footer {
+  opacity: 0.9;
+  background-color: #999;
+  height: 40px;
+}
+
+footer .list-inline {
+  position: relative;
+  top: 10px;
+  bottom: 5px;
+}
+.footer-content {
+  margin-left: 10px;
+  font-size: 18px;
+}
+.footer-content ul {
+ margin-bottom: 0px;
+}
+
+.list-inline li a {
+  color: #111;
+}
+
+.list-inline li a:hover {
+  color: #000;
+}

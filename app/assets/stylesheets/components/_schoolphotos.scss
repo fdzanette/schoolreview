@@ -10,10 +10,6 @@
   font-size: 18px;
   text-shadow: 5px 1px 6px black;
 }
-.photoajust {
-  //margin: 1px;
-  text-align: center;
-}
 
 .photo-post {
   display: flex;
@@ -42,6 +38,33 @@
   padding: 3px;
 }
 
+.photoajust {
+  height: 240px;
+}
+
 .photoajustpic {
   width: 100%;
+}
+
+.photoajust .btn {
+  color: purple;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: transparent;
+}
+
+.photoajust p {
+  margin: 0;
+  color: purple;
+  font-weight: bold;
+  font-size: 16px;
+  position: relative;
+  left: 25px;
+  bottom: 28px;
+
+}
+
+.row-img-icons {
+  position: relative;
+  bottom: 24px;
 }
