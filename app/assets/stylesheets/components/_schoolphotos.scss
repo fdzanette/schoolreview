@@ -32,6 +32,11 @@
   font-size: 14px;
 }
 
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+  height: 260px;
+  width: 330px;
+}
+
 .photorow {
   margin: 5px;
   border: 1px white solid;
@@ -44,6 +49,7 @@
 
 .photoajustpic {
   width: 100%;
+  margin: 0 auto;
 }
 
 .photoajust .btn {
