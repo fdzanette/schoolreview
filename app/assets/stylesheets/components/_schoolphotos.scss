@@ -34,40 +34,29 @@
 
 .carousel-inner > .item > img, .carousel-inner > .item > a > img {
   height: 260px;
-  width: 330px;
+  width: 300px;
   margin: 0 auto;
   border: 1px white solid;
 }
 
 .photorow {
   height: 260px;
-  width: 330px;
-  margin: 0 auto;
-  border: 1px white solid;
-
-}
-
-.photorow img {
-  //margin: 5px;
-  //border: 1px white solid;
-  //padding: 3px;
-}
-
-
-.photoajustpic {
-  height: 260px;
-  width: 330px;
-  margin: 0 auto;
-  position: relative;
+  width: 100%;
   text-align: center;
 }
 
+.carousel-inner > .item > .photorow .photoajustpic {
+  width: 300px;
+  margin: 0 auto;
+  position: relative;
+}
 
 .photoajustpic img {
   height: 260px;
-  width: 328px;
+  width: 100%;
   margin: 0 auto;
   position: relative;
+  border: 1px white solid;
 }
 
 .row-img-icons {
