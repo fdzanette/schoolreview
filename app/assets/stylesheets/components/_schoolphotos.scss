@@ -34,43 +34,55 @@
 
 .carousel-inner > .item > img, .carousel-inner > .item > a > img {
   height: 260px;
-  width: 330px;
+  width: 300px;
+  margin: 0 auto;
+  border: 1px white solid;
 }
 
 .photorow {
-  margin: 5px;
-  border: 1px white solid;
-  padding: 3px;
+  height: 260px;
+  width: 100%;
+  text-align: center;
 }
 
-.photoajust {
-  height: 240px;
+.carousel-inner > .item > .photorow .photoajustpic {
+  width: 300px;
+  margin: 0 auto;
+  position: relative;
 }
 
-.photoajustpic {
+.photoajustpic img {
+  height: 260px;
   width: 100%;
   margin: 0 auto;
-}
-
-.photoajust .btn {
-  color: purple;
-  font-size: 16px;
-  font-weight: bold;
-  background-color: transparent;
-}
-
-.photoajust p {
-  margin: 0;
-  color: purple;
-  font-weight: bold;
-  font-size: 16px;
   position: relative;
-  left: 25px;
-  bottom: 28px;
-
+  border: 1px white solid;
 }
 
 .row-img-icons {
   position: relative;
   bottom: 24px;
+}
+
+.like-pic a {
+  background: none;
+  position: absolute;
+  bottom: -5px;
+  left: 10px;
+  color: greenyellow;
+  font-size: 16px;
+  &:hover {
+    font-size: 17px;
+    text-decoration: none;
+    background: none;
+  }
+}
+
+.likes-count p {
+  color: blue;
+  font-weight: bold;
+  font-size: 13px;
+  position: absolute;
+  bottom: -9px;
+  left: 32px;
 }

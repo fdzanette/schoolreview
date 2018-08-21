@@ -20,12 +20,39 @@
            <% end %>
           </ol>
           <div class="item active">
-            <%= cl_image_tag @photos.first.photo, class: "photorow photoajustpic" %>
+            <div class="photorow">
+              <div class="photoajustpic">
+                <% if @photos.first.photo.present? %>
+                <%= cl_image_tag @photos.first.photo %>
+                <div class="like-pic">
+                  <%= link_to like_school_review_path(@school, id: @photos.first.id), method: :put, class: "btn btn-default" do %>
+                    <i class="glyphicon glyphicon-thumbs-up"></i>
+                  <%end%>
+                </div>
+                <div class="likes-count">
+                  <p> <%= @photos.first.get_up_votes.size %> </p>
+                </div>
+                <% end %>
+              </div>
+              <%#console%>
+            </div>
           </div>
           <% @photos.drop(1).each do |pic| %>
             <% if pic.photo.present? %>
               <div class="item">
-                <%= image_tag pic.photo, class: "photorow photoajustpic" %>
+                <div class="photorow">
+                  <div class="photoajustpic">
+                    <%= image_tag pic.photo %>
+                    <div class="like-pic">
+                      <%= link_to like_school_review_path(@school, id: pic), method: :put, class: "btn btn-default" do %>
+                        <i class="glyphicon glyphicon-thumbs-up"></i>
+                      <%end%>
+                    </div>
+                    <div class="likes-count">
+                      <p> <%= pic.get_up_votes.size %> </p>
+                    </div>
+                  </div>
+                </div>
               </div>
             <% end %>
           <% end %>
