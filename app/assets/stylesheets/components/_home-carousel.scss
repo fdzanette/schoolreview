@@ -1,0 +1,54 @@
+.divard {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.carousel-inner .indicator-wrapper li {
+  position: relative;
+  top: 40px;
+  background-color: green;
+  padding-bottom: 10px;
+}
+
+.carousel-inner {
+  overflow: visible;
+  width: 100%;
+}
+
+.item .row .carousel-wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+.item.active .row .carousel-wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+// .item .center-carousel-card {
+//   width: 100%;
+//   text-align: center;
+// }
+
+// .item.active .center-carousel-card {
+//   width: 100%;
+//   text-align: center;
+
+// }
+// .carousel-inner .item.active .carousel-wrapper.details {
+//   margin: 0 auto;
+// }
+
+// .carousel-inner .item .carousel-wrapper {
+// }
+
+.carousel-control.right, .carousel-control.left {
+  background-image: none;
+  position: absolute;
+  top: 70px;
+}
+
+.carousel-control.right .glyphicon, .carousel-control.left .glyphicon {
+  font-weight: bold;
+  opacity: 1;
+}
