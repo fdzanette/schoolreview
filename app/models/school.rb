@@ -25,6 +25,8 @@ class School < ApplicationRecord
     @homebest << @top.first
     @homebest << @top.second
     @homebest << @top.third
+    #@homebest << @top.fourth
+    #@homebest << @top.fifth
     @homebest
   end
 

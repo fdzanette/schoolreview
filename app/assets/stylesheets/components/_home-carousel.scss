@@ -1,0 +1,35 @@
+.divard {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.carousel-inner .indicator-wrapper li {
+  position: relative;
+  top: 50px;
+}
+
+.carousel-inner {
+  overflow: visible;
+  width: 100%;
+}
+
+.item .row .carousel-wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+.item.active .row .carousel-wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+.carousel-control.right, .carousel-control.left {
+  background-image: none;
+  position: absolute;
+  top: 10px;
+}
+
+.carousel-control.right .glyphicon, .carousel-control.left .glyphicon {
+  font-weight: bold;
+  opacity: 1;
+}
