@@ -4,7 +4,12 @@ class ReviewsController < ApplicationController
   before_action :set_review, only: [:edit, :update, :up_vote]
 
   def all_photos
-    @photos = @school.reviews
+    @photos = []
+    @school.reviews.each do |review|
+      if review.photo.present?
+        @photos << review
+      end
+    end
   end
 
   def index

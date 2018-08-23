@@ -72,3 +72,15 @@
 .escapebanner hr {
 margin-bottom: 0px;
 }
+
+.banner .banner-content .container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.banner .banner-content .container .home-text {
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+
