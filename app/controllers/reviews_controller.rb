@@ -65,7 +65,7 @@ class ReviewsController < ApplicationController
       if @review.destroy
         respond_to do |format|
           format.html { redirect_to user_reviews_reviews_path }
-          format.js  # <-- will render `app/views/reviews/create.js.erb`
+          format.js  # <-- will render `app/views/reviews/destroy.js.erb`
         end
       else
         respond_to do |format|
