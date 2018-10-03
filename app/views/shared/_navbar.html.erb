@@ -26,7 +26,7 @@
     <% else %>
       <!-- Login link (when logged out) -->
       <div class="nav-links">
-        <%= link_to t(".sign_up", default: "Cadastrar"), new_registration_path(:user), class: "navbar-wagon-item navbar-wagon-link" %>
+        <%= link_to t(".sign_up", default: "Cadastre-se"), new_registration_path(:user), class: "navbar-wagon-item navbar-wagon-link" %>
         <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
       </div>
     <% end %>
