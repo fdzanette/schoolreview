@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
   def configure_permitted_parameters
    # For additional fields in app/views/devise/registrations/new.html.erb
    @schools = School.all
-   devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :school_id])
+   devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :school_id, :age])
   end
 
 end
