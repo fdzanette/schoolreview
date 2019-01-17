@@ -22,7 +22,12 @@ class ReviewsController < ApplicationController
 
 
   def new
-    @review = Review.new
+    if current_user.school_id != @school.id
+      flash[:alert] = "Essa não é sua escola!"
+      redirect_to school_path(@school)
+    else
+      @review = Review.new
+    end
   end
 
   def create
